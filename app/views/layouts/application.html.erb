@@ -15,7 +15,7 @@
       <ul class='nav'>
         <li> <%= link_to "Home", root_path %> </li>
         <li> | </li>
-        <li> <%= link_to "About" %> </li>
+        <li> <%= link_to "About", about_path %> </li>
         <li> | </li>
         <li><%= link_to "Login" %></li>
         <li><%= link_to "Logout" %></li>
@@ -25,7 +25,9 @@
     <% flash.each do |name, message|%>
       <%= content_tag(:div, message, class: 'alert') %>
     <% end %>
-    <button><%= link_to "New Post", new_post_path %></button>
+    <% if current_page?(root_path)%>
+      <button><%= link_to "New Post", new_post_path %></button>
+    <% end %>
     <%= yield %>
   </body>
 </html>

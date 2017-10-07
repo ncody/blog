@@ -11,3 +11,9 @@
 <p class="body">
   <%= @post.body %>
 </p>
+<div>
+  <h3>Comments</h3>
+  <%= render @post.comments %>
+  <h4>Add a Comment</h4>
+  <%= render 'comments/form' %>
+</div>
