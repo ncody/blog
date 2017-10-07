@@ -12,7 +12,7 @@
 
   <body>
     <nav>
-      <ul>
+      <ul class='nav'>
         <li> <%= link_to "Home", root_path %> </li>
         <li> | </li>
         <li> <%= link_to "About" %> </li>
@@ -21,7 +21,7 @@
         <li><%= link_to "Logout" %></li>
       </ul>
     </nav>
-    <h1>Nicole's Recipes</h1>
+    <h1>Nicole's Blog</h1>
     <% flash.each do |name, message|%>
       <%= content_tag(:div, message, class: 'alert') %>
     <% end %>
