@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background-color: #A6CFD5;
+}
+
 h1 {
   text-align: center;
   font-family: 'Shadows Into Light Two', cursive;
