@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20171007225252) do
     t.string "title"
     t.text "ingredients"
     t.text "instructions"
+    t.text "cook_time"
+    t.text "original_recipe"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

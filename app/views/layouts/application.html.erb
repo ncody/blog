@@ -18,11 +18,11 @@
         <li> <%= link_to "About", about_path %> </li>
         <li> | </li>
         <% if logged_in? %>
-        <li><%= link_to "Logout" %></li>
+          <li><%= link_to "Logout", :controller => 'sessions', :action => 'destroy' %></li>
         <% else %>
-        <li><%= link_to "Login", new_session_path %></li>
-        <li> | </li>
-        <li> <%= link_to "Sign Up", new_user_path %> </li>
+          <li><%= link_to "Login", new_session_path %></li>
+          <li> | </li>
+          <li> <%= link_to "Sign Up", new_user_path %> </li>
         <% end %>
       </ul>
     </nav>
@@ -30,8 +30,8 @@
     <% flash.each do |name, message|%>
       <%= content_tag(:div, message, class: 'alert') %>
     <% end %>
-    <% if current_page?(root_path)%>
-      <button><%= link_to "New Post", new_post_path %></button>
+    <% if current_page?(root_path) && logged_in? && admin? %>
+      <button id='new-post'><%= link_to "New Recipe", new_post_path %></button>
     <% end %>
     <%= yield %>
   </body>
