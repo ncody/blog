@@ -4,7 +4,7 @@
 
 <p class="date">
   Created <%= time_ago_in_words(@post.created_at) %> ago.
-  <% if admin? %>|
+  <% if logged_in? && admin? %>|
     <%= link_to 'Edit', edit_post_path(@post) %> |
     <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure you would like to delete this post?'} %>
     <% end %>
@@ -19,11 +19,11 @@
     <% end %>
     </ul>
   <h3>Instructions</h3>
-     <ul>
+     <ol>
     <% @instructions.each do |instruction| %>
       <li><%= instruction %></li>
     <% end %>
-    </ul>
+    </ol>
     <p><%= link_to 'Original Recipe', @post.original_recipe %></p>
 </div>
 <div>
