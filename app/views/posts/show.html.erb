@@ -8,9 +8,12 @@
   <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure you would like to delete this post?'} %>
 </p>
 
-<p class="body">
-  <%= @post.body %>
-</p>
+<div class="body">
+  <h3>Ingredients</h3>
+    <p><%= @post.ingredients %></p>
+  <h3>Instructions</h3>
+    <p><%= @post.instructions %></p>
+</div>
 <div>
   <h3>Comments</h3>
   <%= render @post.comments %>
