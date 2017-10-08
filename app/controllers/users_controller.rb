@@ -10,6 +10,7 @@ class UsersController < ApplicationController
       log_in(@user)
       redirect_to root_path
     else
+      @errors = @user.errors.full_messages
       render 'new'
     end
   end

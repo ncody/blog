@@ -1,3 +1,4 @@
+<div class='new-recipe'>
 <%= form_for @post do |f| %>
   <% if @post.errors.any? %>
     <div>
@@ -18,11 +19,11 @@
   </p>
   <p>
     <%= f.label :ingredients %>:
-    <%= f.text_area :ingredients %>
+    <%= f.text_area :ingredients, size: "30x10" %>
   </p>
   <p>
     <%= f.label :instructions %>:
-    <%= f.text_area :instructions %>
+    <%= f.text_area :instructions, size: "30x10" %>
   </p>
   <p>
     <%= f.label :original_recipe %>:
@@ -32,3 +33,4 @@
     <%= f.submit %>
   </p>
 <% end %>
+</div>

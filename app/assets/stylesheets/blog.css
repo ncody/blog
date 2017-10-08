@@ -1,0 +1,79 @@
+body {
+  background-color: #A6CFD5;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 2.5em;
+}
+.nav {
+  list-style-type: none;
+}
+.nav li {
+  display: inline;
+}
+.post-show {
+  background-color: white;
+  padding: 2px;
+  margin: 10px;
+}
+.show-title {
+  margin-left: 10px;
+  color: #412234;
+}
+.show-created {
+  margin-left: 10px;
+  color: grey;
+}
+.about-page {
+  background-color: white;
+  text-align: center;
+  margin: auto;
+}
+#new-post {
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #edeff2;
+  margin-left: 10px;
+}
+.entire-recipe {
+  margin: auto;
+  background-color: #edeff2;
+  padding: 10px 10px 10px 50px;
+  width: 75%;
+}
+.comments {
+  margin-top: 70px;
+}
+.comment-body {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: 18px;
+}
+.commenter {
+  margin: 0px;
+  padding: 0px;
+  color: #3b3b3d;
+  font-size: 16px;
+}
+.time {
+  margin: 0px;
+  padding: 0px;
+  color: #3b3b3d;
+  font-size: 15px;
+  font-style: italic;
+}
+.date {
+  margin: 0px 0px 0px 5px;
+  padding: 0px;
+  color: #3b3b3d;
+  font-size: 16px;
+  font-style: italic;
+}
+.recipe-title {
+  margin-bottom: 3px;
+}
