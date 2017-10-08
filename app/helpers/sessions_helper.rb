@@ -12,4 +12,12 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  def authorize
+    redirect_to login_url if current_user.nil?
+  end
+
+  def admin?
+    current_user.id == 1
+  end
+
 end

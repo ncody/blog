@@ -18,6 +18,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @ingredients = @post.ingredients.split("-")
+    @instructions = @post.instructions.split("-")
   end
 
   def edit
@@ -26,7 +28,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    if @post.update(params[:post].permit(:title, :ingredients, :instructions))
+    if @post.update(params[:post].permit(:title, :ingredients, :instructions, :cook_time, :original_recipe))
       redirect_to @post
     else
       render 'edit'
@@ -41,6 +43,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :ingredients, :instructions)
+    params.require(:post).permit(:title, :ingredients, :instructions, :cook_time, :original_recipe)
   end
 end
