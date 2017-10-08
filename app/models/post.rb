@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   validates :title, presence: true, length: {minimum: 4}
-  validates :body, presence: true
+  validates :instructions, presence: true
+  validates :ingredients, presence: true
 end
