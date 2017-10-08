@@ -40,6 +40,40 @@ h1 {
   background-color: #edeff2;
   margin-left: 10px;
 }
-.new-recipe {
-
+.entire-recipe {
+  margin: auto;
+  background-color: #edeff2;
+  padding: 10px 10px 10px 50px;
+  width: 75%;
+}
+.comments {
+  margin-top: 70px;
+}
+.comment-body {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: 18px;
+}
+.commenter {
+  margin: 0px;
+  padding: 0px;
+  color: #3b3b3d;
+  font-size: 16px;
+}
+.time {
+  margin: 0px;
+  padding: 0px;
+  color: #3b3b3d;
+  font-size: 15px;
+  font-style: italic;
+}
+.date {
+  margin: 0px 0px 0px 5px;
+  padding: 0px;
+  color: #3b3b3d;
+  font-size: 16px;
+  font-style: italic;
+}
+.recipe-title {
+  margin-bottom: 3px;
 }
