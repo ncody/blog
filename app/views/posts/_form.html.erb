@@ -1,5 +1,5 @@
 <div class='new-recipe'>
-<%= form_for @post do |f| %>
+<%= form_for @post, html: { multipart: true } do |f| %>
   <% if @post.errors.any? %>
     <div>
       <ul>
@@ -9,6 +9,10 @@
       </ul>
     </div>
   <% end %>
+ <p>
+    <%= f.label :image %>:
+    <%= f.file_field :image %>
+  </p>
  <p>
     <%= f.label :title %>:
     <%= f.text_field :title %>

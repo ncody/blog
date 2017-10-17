@@ -3,4 +3,6 @@ class Post < ActiveRecord::Base
   validates :title, presence: true, length: {minimum: 4}
   validates :instructions, presence: true
   validates :ingredients, presence: true
+  has_attached_file :image, styles: { large: "600x600>", medium: "300x300.", thumb: "150x150#"}
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 end
